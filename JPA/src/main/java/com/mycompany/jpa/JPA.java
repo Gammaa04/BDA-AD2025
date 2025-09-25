@@ -18,7 +18,7 @@ public class JPA {
 
     public static void main(String[] args) {
         
-EntityManagerFactory emf = Persistence.createEntityManagerFactory("myputa");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("tiendita");
 
         ProductoDAO productoDAO = new ProductoDAO(emf);
 

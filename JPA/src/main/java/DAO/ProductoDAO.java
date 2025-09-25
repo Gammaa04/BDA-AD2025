@@ -32,12 +32,14 @@ public class ProductoDAO implements Serializable {
     }
 
     public void insertar(Producto producto) {
-        EntityManager em = null;
+        EntityManager em = getEntityManager();
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             em.persist(producto);
             em.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
         } finally {
             if (em != null) {
                 em.close();
@@ -46,7 +48,7 @@ public class ProductoDAO implements Serializable {
     }
 
     public void actualizar(Producto producto) throws NonexistentEntityException, Exception {
-        EntityManager em = null;
+        EntityManager em = getEntityManager();
         try {
             em = getEntityManager();
             em.getTransaction().begin();
@@ -69,7 +71,7 @@ public class ProductoDAO implements Serializable {
     }
 
     public void eliminar(Long id) throws NonexistentEntityException {
-        EntityManager em = null;
+        EntityManager em = getEntityManager();
         try {
             em = getEntityManager();
             em.getTransaction().begin();
@@ -82,6 +84,8 @@ public class ProductoDAO implements Serializable {
             }
             em.remove(producto);
             em.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
         } finally {
             if (em != null) {
                 em.close();
@@ -108,6 +112,11 @@ public class ProductoDAO implements Serializable {
                 q.setFirstResult(firstResult);
             }
             return q.getResultList();
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            return null;
+
         } finally {
             em.close();
         }
@@ -117,8 +126,11 @@ public class ProductoDAO implements Serializable {
         EntityManager em = getEntityManager();
         try {
             return em.find(Producto.class, id);
+        }catch (Exception ex) {
+            System.out.println(ex.getMessage());
         } finally {
             em.close();
+            return null;
         }
     }
 
@@ -130,8 +142,11 @@ public class ProductoDAO implements Serializable {
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
             return ((Long) q.getSingleResult()).intValue();
+        }catch (Exception ex) {
+            System.out.println(ex.getMessage());
         } finally {
             em.close();
+            return -1;
         }
     }
 

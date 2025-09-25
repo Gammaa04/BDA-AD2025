@@ -1,6 +1,6 @@
-/Users/jesusgammaelsotoescalante/NetBeansProjects/JPA/src/main/java/DAO/ProductoDAO.java
-/Users/jesusgammaelsotoescalante/NetBeansProjects/JPA/src/main/java/DAO/exceptions/IllegalOrphanException.java
-/Users/jesusgammaelsotoescalante/NetBeansProjects/JPA/src/main/java/DAO/exceptions/NonexistentEntityException.java
-/Users/jesusgammaelsotoescalante/NetBeansProjects/JPA/src/main/java/DAO/exceptions/PreexistingEntityException.java
-/Users/jesusgammaelsotoescalante/NetBeansProjects/JPA/src/main/java/Entity/Producto.java
-/Users/jesusgammaelsotoescalante/NetBeansProjects/JPA/src/main/java/com/mycompany/jpa/JPA.java
+/Users/jesusgammaelsotoescalante/Documents/GitHub/BDA-AD2025/JPA/src/main/java/DAO/ProductoDAO.java
+/Users/jesusgammaelsotoescalante/Documents/GitHub/BDA-AD2025/JPA/src/main/java/DAO/exceptions/IllegalOrphanException.java
+/Users/jesusgammaelsotoescalante/Documents/GitHub/BDA-AD2025/JPA/src/main/java/DAO/exceptions/NonexistentEntityException.java
+/Users/jesusgammaelsotoescalante/Documents/GitHub/BDA-AD2025/JPA/src/main/java/DAO/exceptions/PreexistingEntityException.java
+/Users/jesusgammaelsotoescalante/Documents/GitHub/BDA-AD2025/JPA/src/main/java/Entity/Producto.java
+/Users/jesusgammaelsotoescalante/Documents/GitHub/BDA-AD2025/JPA/src/main/java/com/mycompany/jpa/JPA.java
