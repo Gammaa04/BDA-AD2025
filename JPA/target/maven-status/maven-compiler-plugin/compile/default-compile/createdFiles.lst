@@ -1,0 +1,7 @@
+dAO/exceptions/PreexistingEntityException.class
+dAO/exceptions/NonexistentEntityException.class
+dAO/exceptions/IllegalOrphanException.class
+com/mycompany/jpa/JPA.class
+dAO/ProductoDAO.class
+Entity/Producto_.class
+Entity/Producto.class
