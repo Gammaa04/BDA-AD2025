@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.jpa;
 
 import DAO.ProductoDAO;
@@ -17,8 +16,8 @@ import java.util.List;
 public class JPA {
 
     public static void main(String[] args) {
-        
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("tiendita");
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPU");
 
         ProductoDAO productoDAO = new ProductoDAO(emf);
 
@@ -31,15 +30,19 @@ public class JPA {
 
         // Buscar por ID
         Producto buscado = productoDAO.buscarid(nuevo.getId());
-        System.out.println("Producto encontrado: " + buscado.getNombre());
+        
+        if (buscado != null) {
+            System.out.println("Producto encontrado: " + buscado.getNombre());
 
-        // Actualizar
-        buscado.setPrecio(44.99f);
-        try {
-            productoDAO.actualizar(buscado);
-            System.out.println("Producto actualizado.");
-        } catch (Exception e) {
-            e.printStackTrace();
+            // Actualizar
+            buscado.setPrecio(44.99f);
+
+            try {
+                productoDAO.actualizar(buscado);
+                System.out.println("Producto actualizado.");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         // Listar todos
@@ -59,11 +62,5 @@ public class JPA {
 
         // Cerrar el EntityManagerFactory
         emf.close();
-        
-        
-        
-        
-        
-        
     }
 }
