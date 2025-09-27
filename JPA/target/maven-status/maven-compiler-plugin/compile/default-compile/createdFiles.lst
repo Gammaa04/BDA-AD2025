@@ -1,7 +1,6 @@
-DAO/ProductoDAO.class
-com/mycompany/jpa/JPA.class
-DAO/exceptions/IllegalOrphanException.class
-DAO/exceptions/PreexistingEntityException.class
-Entity/Producto_.class
-Entity/Producto.class
-DAO/exceptions/NonexistentEntityException.class
+DAO\ProductoDAO.class
+DAO\exceptions\IllegalOrphanException.class
+DAO\exceptions\PreexistingEntityException.class
+DAO\exceptions\NonexistentEntityException.class
+com\mycompany\jpa\JPA.class
+Entity\Producto.class
