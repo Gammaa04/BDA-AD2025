@@ -1,0 +1,7 @@
+Entity/SuperHeroe.class
+Entity/IdentidadSecreta.class
+com/mycompany/examenjpa/ExamenJPA.class
+DAO/Interfaces/ISuperHeroesDAO.class
+Config/JpaUtil.class
+DAO/SuperHeroeDAO.class
+Entity/Universo.class
